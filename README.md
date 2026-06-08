@@ -1,4 +1,4 @@
-# AI-SE Learn: Base de Conocimiento de Experiencias Docentes con IA en Ingeniería del Software
+# Base de Conocimiento de Experiencias Docentes con IA en Ingeniería del Software
 
 Repositorio colaborativo que recopila experiencias de uso de **Inteligencia Artificial Generativa** en la docencia de asignaturas de **Ingeniería del Software**. Está mantenido por docentes de múltiples universidades con el objetivo de compartir, documentar y facilitar la replicabilidad de innovaciones pedagógicas.
 
