@@ -1,0 +1,15 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.inFolder("experiencias")
+        - file.tags.contains("Maintenance")
+    order:
+      - file.name
+      - universidad
+      - curso
+      - asignatura
+      - creada
+      - tags
+      - tipo_experiencia
