@@ -1,0 +1,79 @@
+name: Discusión
+description: Propón una mejora, plantea una pregunta o abre un debate sobre el repositorio
+title: "[Discusión] "
+labels: ["discusión"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Usa este formulario para proponer mejoras a la estructura del repositorio,
+        plantear dudas sobre las convenciones, o abrir un debate sobre la dirección
+        del proyecto. Para contribuir una experiencia docente, usa en cambio la
+        plantilla [Nueva experiencia](../../issues/new?template=nueva-experiencia.yml&labels=nueva-experiencia).
+
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: "Tipo de discusión *"
+      description: Elige la categoría que mejor describe tu aportación
+      options:
+        - Propuesta de mejora de la plantilla de experiencias
+        - Propuesta de mejora del proceso de contribución
+        - Propuesta de nueva convención o campo del frontmatter
+        - Pregunta sobre cómo usar o contribuir al repositorio
+        - Debate sobre criterios de revisión o gobernanza
+        - Otro
+    validations:
+      required: true
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: "Descripción *"
+      description: Explica con detalle tu propuesta, pregunta o tema de debate
+      placeholder: "Describe el problema, la situación actual y lo que propones o preguntas..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivacion
+    attributes:
+      label: Motivación
+      description: >
+        ¿Por qué es relevante esto para el repositorio? ¿Has encontrado un problema
+        concreto, o es una mejora preventiva?
+      placeholder: "Ej: Al intentar documentar mi experiencia encontré que el campo X no permite recoger Y..."
+
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Propuesta concreta
+      description: >
+        Si tienes una solución o cambio específico en mente, descríbelo aquí.
+        No es obligatorio — también es válido abrir el debate sin propuesta.
+      placeholder: "Ej: Añadir un campo opcional `num_estudiantes` al frontmatter de tipo entero..."
+
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas consideradas
+      description: ¿Has pensado en otras formas de abordar el problema?
+      placeholder: "Ej: También podría resolverse documentándolo en el CONTRIBUTING, pero prefiero..."
+
+  - type: input
+    id: experiencias_afectadas
+    attributes:
+      label: Experiencias afectadas
+      description: >
+        Si tu propuesta afecta a experiencias ya publicadas, indica cuáles
+        (nombres de fichero separados por comas)
+      placeholder: "Ej: copilot-pair-programming-construccion.md, chatgpt-generacion-casos-prueba.md"
+
+  - type: checkboxes
+    id: confirmaciones
+    attributes:
+      label: Confirmaciones
+      options:
+        - label: He buscado en los Issues abiertos y cerrados para comprobar que este tema no se ha tratado ya
+          required: true

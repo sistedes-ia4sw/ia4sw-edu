@@ -1,0 +1,15 @@
+# owner global
+*   @rre-uex
+
+# Cualquier experiencia nueva requiere revisión de al menos un mantenedor
+# Mantenedores están dentro de un equipo de la organización
+/experiencias/**   @sistedes-ia4sw/mantenedores
+/assets/**         @sistedes-ia4sw/mantenedores 
+
+# La plantilla y estructura base la revisas tú
+/plantillas/**     @rre-uex
+README.md       @rre-uex
+CONTRIBUTING.md @rre-uex
+
+# Proteger .github/
+/.github/**     @rre-uex

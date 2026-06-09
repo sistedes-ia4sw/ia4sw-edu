@@ -1,0 +1,194 @@
+name: Nueva experiencia docente
+description: Aporta una experiencia de uso de IA generativa en docencia de Ingeniería del Software
+title: "[Experiencia] "
+labels: ["nueva-experiencia"]
+assignees:
+  - rre-uex
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por contribuir al repositorio. Rellena los campos a continuación.
+        Un mantenedor creará el fichero `.md` a partir de esta información y te acreditará como autor/a.
+        
+        Los campos marcados con * son obligatorios.
+
+  # ─── INFORMACIÓN GENERAL ─────────────────────────────────────────────────────
+
+  - type: input
+    id: titulo
+    attributes:
+      label: "Título *"
+      description: Título descriptivo de la experiencia
+      placeholder: "Ej: Uso de GitHub Copilot para pair programming en Construcción del Software"
+    validations:
+      required: true
+
+  - type: input
+    id: universidad
+    attributes:
+      label: "Universidad *"
+      placeholder: "Ej: Universidad de Zaragoza"
+    validations:
+      required: true
+
+  - type: input
+    id: autores
+    attributes:
+      label: "Autores *"
+      description: Nombre completo de cada autor/a, separados por comas
+      placeholder: "Ej: Ana García López, Juan Martínez Ruiz"
+    validations:
+      required: true
+
+  - type: input
+    id: orcid
+    attributes:
+      label: ORCID
+      description: ORCID de cada autor/a, en el mismo orden que los autores (opcional pero recomendado)
+      placeholder: "Ej: 0000-0000-0000-0001, 0000-0000-0000-0002"
+
+  - type: input
+    id: asignatura
+    attributes:
+      label: "Asignatura *"
+      placeholder: "Ej: Ingeniería del Software II"
+    validations:
+      required: true
+
+  - type: input
+    id: curso
+    attributes:
+      label: "Curso académico *"
+      placeholder: "Ej: 2024-25"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: nivel_educativo
+    attributes:
+      label: Nivel educativo
+      options:
+        - Grado
+        - Máster
+        - Posgrado
+    validations:
+      required: true
+
+  - type: dropdown
+    id: disciplinas_swebok
+    attributes:
+      label: "Disciplinas SWEBOK *"
+      description: Selecciona todas las que apliquen
+      multiple: true
+      options:
+        - Requirements
+        - Architecture
+        - Design
+        - Construction
+        - Testing
+        - Operations
+        - Maintenance
+        - Configuration Management
+        - Management
+        - Process
+        - Models and Methods
+        - Quality
+        - Security
+    validations:
+      required: true
+
+  - type: input
+    id: herramientas_ia
+    attributes:
+      label: "Herramientas de IA utilizadas *"
+      description: Separadas por comas
+      placeholder: "Ej: GitHub Copilot, ChatGPT"
+    validations:
+      required: true
+
+  - type: input
+    id: palabras_clave
+    attributes:
+      label: Palabras clave
+      description: Separadas por comas
+      placeholder: "Ej: pair programming, revisión de código, evaluación formativa"
+
+  # ─── CONTENIDO DE LA EXPERIENCIA ─────────────────────────────────────────────
+
+  - type: textarea
+    id: objetivos
+    attributes:
+      label: "2. Objetivos de la innovación *"
+      description: Qué conocimientos, habilidades y competencias se persiguen
+      placeholder: "Describe los objetivos de aprendizaje y pedagógicos de la experiencia..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: metodologia
+    attributes:
+      label: "3. Metodología y diseño *"
+      description: Estrategia didáctica, herramientas, secuencia de actividades y roles
+      placeholder: "Describe cómo se diseñó e implementó la experiencia..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementacion
+    attributes:
+      label: "4. Implementación y resultados *"
+      description: Ejecución en el aula, participación, evidencias y datos
+      placeholder: "Describe qué ocurrió en la práctica y qué resultados se obtuvieron..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: analisis
+    attributes:
+      label: "5. Análisis crítico y reflexión"
+      description: Evaluación, desafíos encontrados, consideraciones éticas y lecciones aprendidas
+      placeholder: "¿Qué funcionó bien? ¿Qué cambiarías? ¿Qué aspectos éticos surgieron?..."
+
+  - type: textarea
+    id: replicabilidad
+    attributes:
+      label: "6. Guía de replicabilidad"
+      description: Orientaciones prácticas para que otros docentes puedan reproducir la experiencia
+      placeholder: "Requisitos previos, pasos clave, recursos necesarios, advertencias..."
+
+  - type: textarea
+    id: mejoras
+    attributes:
+      label: "7. Futuras mejoras o adaptaciones"
+      description: Propuestas de evolución y posible transferencia a otros contextos
+      placeholder: "¿Qué mejorarías en próximas ediciones? ¿A qué otras asignaturas podría transferirse?..."
+
+  # ─── RECURSOS ADICIONALES ────────────────────────────────────────────────────
+
+  - type: textarea
+    id: recursos
+    attributes:
+      label: Recursos adicionales
+      description: >
+        Enlaza aquí cualquier material de apoyo: rúbricas, enunciados de prácticas,
+        prompts utilizados, diapositivas, etc. Un mantenedor los incorporará a `assets/`
+        si es necesario.
+      placeholder: "Ej: https://drive.google.com/..."
+
+  # ─── CONFIRMACIONES ──────────────────────────────────────────────────────────
+
+  - type: checkboxes
+    id: confirmaciones
+    attributes:
+      label: Confirmaciones
+      options:
+        - label: He comprobado que no existe ya una experiencia similar en el repositorio
+          required: true
+        - label: Autorizo que esta experiencia se publique bajo licencia CC BY-SA 4.0
+          required: true
+        - label: >
+            Si hay más autores/as, he obtenido su conformidad para incluirlos
+            y publicar bajo esta licencia
+          required: true
