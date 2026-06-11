@@ -5,9 +5,9 @@ universidad: Universidad de Alicante
 autores: Cristina Cachero
 asignatura: Gestión de Calidad Software
 tipo_experiencia: Actividad
-estado: En proceso
+estado: En desarrollo
 curso: 1
-cuatrimestre: Q1
+cuatrimestre: C1
 estudiantes: 80
 fecha_academica: 2025-12-15
 url:

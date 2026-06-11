@@ -5,14 +5,15 @@ universidad: Universidad de Sevilla
 autores: Pablo Fernández Montes, Jose Antonio Parejo Maestre y Amador Durán Toro
 asignatura: Ingeniería de Requisitos
 tipo_experiencia: Actividad
-estado: Realizada
+estado: En desarrollo
 curso: 3
-cuatrimestre: Q1
+cuatrimestre: C1
 estudiantes: 160
 fecha_academica: 2025-10-20
-url: leia.ovh
+url: https://leia.ovh/
 tags:
-  - requisitos
+  - Requirements
+  
 ---
 # Ingeniería de Requisitos con Clientes Simulados por asistentes inteligentes de aprendizaje (LEIAs)
 
