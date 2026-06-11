@@ -22,7 +22,9 @@ Cada experiencia es un fichero Markdown (`.md`) que documenta de forma estructur
 ├── CONTRIBUTING.md             # Guía detallada de contribución
 ├── LICENSE
 ├── plantillas/
-│   └── experiencia.md    # Plantilla Templater para Obsidian
+│   └── experiencia.md          # Plantilla Templater para Obsidian
+├── plantillas-texto/
+│   └── experiencia-texto.md    # Plantilla en texto para Obsidian
 ├── experiencias/
 │   ├── chatgpt-generacion-casos-prueba.md
 │   ├── copilot-pair-programming-construccion.md
@@ -37,85 +39,35 @@ Cada experiencia es un fichero Markdown (`.md`) que documenta de forma estructur
 
 Navega a la carpeta [`experiencias/`](experiencias/) y abre cualquier fichero `.md`. GitHub renderiza el Markdown directamente, incluyendo el frontmatter YAML como tabla de metadatos. Puedes usar la búsqueda de GitHub (`/` o la barra de búsqueda) para localizar experiencias por universidad, herramienta, disciplina SWEBOK, etc.
 
-### En Obsidian (local)
+### En Obsidian (local - recomendada)
 
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/TU-ORG/ai-se-learn.git
    ```
-2. Abre la carpeta clonada como vault en Obsidian (*Open folder as vault*).
+2. Abre la carpeta clonada como vault en [Obsidian](https://obsidian.md/download) (*Open folder as vault*).
 3. Abre el fichero listado (BASE) que contiene un listado interactivo de todas las experiencias que permite aplicar filtros por cualquiera de los datos de la información general, como por ejemplo el nombre de una universidad.
-4. Si instalas el plugin **Templater** y configuras `_templates/` como carpeta de plantillas, podrás crear nuevas experiencias de forma guiada.
+![README-obsidian-listado](assets/img/README-obsidian-listado.png)
+4. Selecciona una experiencia para verla con detalle.
+![README-obsidian-exp](assets/img/README-obsidian-exp.png)
 
-### Plugins de Obsidian recomendados
+5. También puedes seleccionar una experiencia concreta desde la carpeta `experiencias/`
 
-| Plugin | Uso |
-|--------|-----|
-| **Dataview** | Consultas y vistas agregadas sobre las experiencias |
-| **Templater** | Creación guiada de nuevas experiencias con la plantilla |
-| **Calendar** | Navegación temporal por fecha académica |
+## Cómo contribuir
 
-## Cómo aportar una experiencia
+### Aportar una experiencia
 
-### Opción A: Pull Request (recomendada para usuarios de Git)
+Revisa nuestra [guía de contribución](CONTRIBUTING.md).
 
-1. Haz **fork** de este repositorio.
-2. Crea una rama descriptiva:
-   ```bash
-   git checkout -b experiencia/tu-universidad-tema-breve
-   ```
-3. Copia la plantilla y rellénala:
-   ```bash
-   cp _templates/"Experiencia IA-IS.md" experiencias/titulo-de-tu-experiencia.md
-   ```
-   Rellena el frontmatter YAML y todas las secciones. Consulta la [guía de contribución](CONTRIBUTING.md) para los detalles sobre convenciones de nombres, campos obligatorios y estilo.
-4. Haz **commit** y **push**:
-   ```bash
-   git add experiencias/titulo-de-tu-experiencia.md
-   git commit -m "Nueva experiencia: Título de tu experiencia"
-   git push origin experiencia/tu-universidad-tema-breve
-   ```
-5. Abre un **Pull Request** contra la rama `main`. Un mantenedor revisará tu contribución y te proporcionará feedback si es necesario.
+### Formar parte del equipo de mantenedores
 
-### Opción B: Issue (para quienes no usen Git habitualmente)
+Si eres:
+- docente de una universidad española, 
+- miembro de [SISTEDES](https://www.sistedes.es/), 
+- has contribuido al menos una experiencia publicada 
+- y quieres implicarte en la revisión. 
 
-Si no estás familiarizado con el flujo de Pull Requests, puedes aportar tu experiencia abriendo un **Issue** con la etiqueta `nueva-experiencia`. Usa la plantilla de Issue proporcionada, que contiene los mismos campos que la plantilla Markdown. Un mantenedor se encargará de convertirlo en el fichero `.md` correspondiente y te dará crédito como autor.
-<!--
-➡️ [Abrir un Issue de nueva experiencia](../../issues/new?template=nueva-experiencia.yml&labels=nueva-experiencia)
--->
-## Convenciones
-
-### Nombres de fichero
-
-Usa kebab-case descriptivo basado en el tema principal de la experiencia:
-
-```
-chatgpt-generacion-casos-prueba.md
-copilot-pair-programming-construccion.md
-claude-revision-codigo-arquitectura.md
-```
-
-### Campos obligatorios del frontmatter
-
-Los campos marcados con `*` en la plantilla son obligatorios: `titulo`, `universidad`, `autores`, `asignatura`, `estado` y `curso`. El resto son opcionales pero muy recomendables para maximizar la utilidad de la base de conocimiento.
-
-### Disciplinas SWEBOK
-
-Usa exactamente estos valores en el campo `disciplinas_swebok` para garantizar la consistencia en las búsquedas:
-
-`Requirements` · `Architecture` · `Design` · `Construction` · `Testing` · `Operations` · `Maintenance` · `Configuration Management` · `Management` · `Process` · `Models and Methods` · `Quality` · `Security`
-
-### Idioma
-
-Las experiencias pueden redactarse en **español** o en **inglés**. El frontmatter YAML debe mantener los nombres de campo en español tal como están definidos en la plantilla para garantizar la compatibilidad con las consultas Dataview.
-
-### Imágenes y recursos
-
-Si tu experiencia incluye imágenes, diagramas u otros recursos, colócalos en `assets/img/` con un prefijo que identifique tu experiencia (por ejemplo, `assets/img/chatgpt-casos-prueba-diagrama.png`) y referenciarlos con rutas relativas:
-
-```markdown
-![Diagrama del flujo de trabajo](../assets/img/chatgpt-casos-prueba-diagrama.png)
-```
+Abre un Issue con la etiqueta `mantenedor` para solicitarlo.
 
 ## Gobernanza y revisión
 
@@ -123,7 +75,7 @@ Este repositorio se gestiona con un modelo abierto de revisión por pares:
 
 - **Mantenedores**: un grupo de docentes de distintas universidades con permisos de merge. Si quieres unirte como mantenedor, abre un Issue con la etiqueta `mantenedor`.
 - **Revisión de PRs**: cada PR es revisado por al menos un mantenedor que no sea de la misma universidad que el autor, para garantizar que la experiencia es comprensible y replicable por terceros.
-- **Criterios de aceptación**: la experiencia debe usar la plantilla oficial, tener los campos obligatorios completos, y aportar contenido sustancial en al menos las secciones 1–4.
+- **Criterios de aceptación**: la experiencia debe usar la plantilla oficial, tener los campos obligatorios completos, y aportar contenido sustancial en al menos las secciones 1–3.
 
 ## Código de conducta
 

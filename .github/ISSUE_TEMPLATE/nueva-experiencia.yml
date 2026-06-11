@@ -43,13 +43,6 @@ body:
       required: true
 
   - type: input
-    id: orcid
-    attributes:
-      label: ORCID
-      description: ORCID de cada autor/a, en el mismo orden que los autores (opcional pero recomendado)
-      placeholder: "Ej: 0000-0000-0000-0001, 0000-0000-0000-0002"
-
-  - type: input
     id: asignatura
     attributes:
       label: "Asignatura *"
@@ -57,27 +50,72 @@ body:
     validations:
       required: true
 
-  - type: input
+  - type: dropdown
+    id: tipo_experiencia
+    attributes:
+      label: Tipo de experiencia
+      options:
+        - Actividad
+        - Caso de Estudio
+        - Taller
+        - Proyecto
+        - Laboratorio        
+    validations:
+      required: true
+
+  - type: dropdown
+    id: estado
+    attributes:
+      label: Estado de la experiencia
+      options:
+        - Activa
+        - En desarrollo
+        - Archivada       
+    validations:
+      required: true
+
+  - type: dropdown
     id: curso
     attributes:
-      label: "Curso académico *"
-      placeholder: "Ej: 2024-25"
-    validations:
-      required: true
-
-  - type: dropdown
-    id: nivel_educativo
-    attributes:
-      label: Nivel educativo
+      label: Curso 
       options:
-        - Grado
-        - Máster
-        - Posgrado
+        - 1
+        - 2
+        - 3
+        - 4
+        - Master        
     validations:
       required: true
 
   - type: dropdown
-    id: disciplinas_swebok
+    id: cuatrimestre
+    attributes:
+      label: Cuatrimestre
+      options:
+        - C1
+        - C2
+        - Anual
+    validations:
+      required: true
+
+  - type: input
+    id: estudiantes
+    attributes:
+      label: "Número de estudiantes *"
+      placeholder: "Ej: 30"
+    validations:
+      required: true
+  
+  - type: input
+    id: url
+    attributes:
+      label: "URL de la experiencia *"
+      placeholder: "Ej: https://example.com/experiencia"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: tags
     attributes:
       label: "Disciplinas SWEBOK *"
       description: Selecciona todas las que apliquen
@@ -98,22 +136,6 @@ body:
         - Security
     validations:
       required: true
-
-  - type: input
-    id: herramientas_ia
-    attributes:
-      label: "Herramientas de IA utilizadas *"
-      description: Separadas por comas
-      placeholder: "Ej: GitHub Copilot, ChatGPT"
-    validations:
-      required: true
-
-  - type: input
-    id: palabras_clave
-    attributes:
-      label: Palabras clave
-      description: Separadas por comas
-      placeholder: "Ej: pair programming, revisión de código, evaluación formativa"
 
   # ─── CONTENIDO DE LA EXPERIENCIA ─────────────────────────────────────────────
 

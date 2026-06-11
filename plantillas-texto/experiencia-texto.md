@@ -1,38 +1,17 @@
 ---
-<%*
-const titulo = await tp.system.prompt("Título de la Experiencia");
-const universidad = await tp.system.prompt("Universidad");
-const autores= await tp.system.prompt("Profesor(es) / Autores (separados por coma)"); 
-const asignatura = await tp.system.prompt("Asignatura");
-const tipo_experiencia = await tp.system.suggester(["Actividad", "Caso de Estudio", "Taller", "Proyecto", "Laboratorio"], ["Actividad", "Caso de Estudio", "Taller", "Proyecto", "Laboratorio"]);
-const estado = await tp.system.suggester(["Activa", "En desarrollo", "Archivada"], ["Activa", "En desarrollo", "Archivada"]);
-const curso = await tp.system.suggester(["1º", "2º", "3º", "4º", "Máster"], ["1", "2", "3", "4", "Master"]);
-const cuatrimestre = await tp.system.suggester(["Primer cuatrimestre", "Segundo cuatrimestre", "Anual"], ["C1", "C2", "Anual"]);
-const estudiantes = await tp.system.prompt("Número de estudiantes");
-const url = await tp.system.prompt("URL de información adicional (dejar vacío si no hay)","-");
 
-const kebab = titulo
-  .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-  .toLowerCase()
-  .replace(/[^a-z0-9\s-]/g, "")
-  .trim()
-  .replace(/\s+/g, "-");
-const nombre = tp.date.now("YYYY-MM-DD") + "_" + kebab;
-await tp.file.rename(nombre);
-await tp.file.move("/experiencias/" + nombre);
-%>
-creada: <% tp.date.now("YYYY-MM-DD") %> 
-titulo: <% titulo %>
-universidad: <% universidad %>
-autores: <% autores %>
-asignatura: <% asignatura %>
-tipo_experiencia: <% tipo_experiencia %>
-estado: <% estado %>
-curso: <% curso %>
-cuatrimestre: <% cuatrimestre %>
-estudiantes: <% estudiantes %>
-fecha_academica: <% tp.date.now("YYYY-MM-DD") %> 
-url: <% url %>" 
+creada: "YYYY-MM-DD *" 
+titulo: "Título *"
+universidad: "Universidad *"
+autores: "autores *"
+asignatura: "asignatura *"
+tipo_experiencia: "tipo_experiencia *"
+estado: "estado *"
+curso: "curso *"
+cuatrimestre: "cuatrimestre *"
+estudiantes: "estudiantes"
+fecha_academica: "YYYY-MM-DD" 
+url: "url" 
 tags:
   - Requirements
   - Architecture
@@ -50,7 +29,8 @@ tags:
 
 ---
 
-# <% titulo %>
+# Título
+
 ## 1. Información General
 
 ### Descripción General
