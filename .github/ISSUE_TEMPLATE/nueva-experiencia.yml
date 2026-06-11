@@ -105,6 +105,14 @@ body:
       placeholder: "Ej: 30"
     validations:
       required: true
+
+  - type: input
+    id: fecha
+    attributes:
+      label: "Fecha académica *"
+      placeholder: "Ej: 2024-04-06"
+    validations:
+      required: false
   
   - type: input
     id: url

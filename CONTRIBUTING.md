@@ -152,6 +152,7 @@ estado: ["Activa", "En desarrollo", "Archivada"]         # * obligatorio
 curso: ["1", "2", "3", "4", "Master"]                    # * obligatorio
 cuatrimestre: ["C1", "C2", "Anual"]                      # * obligatorio
 estudiantes: "Número de estudiantes"
+fecha_academica: "2025-12-15"
 url: "URL de información adicional"
 tags:                                                    # al menos una
   - Requirements
